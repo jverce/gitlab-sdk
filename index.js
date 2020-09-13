@@ -1,3 +1,3 @@
-export default function() {
+module.exports = function() {
     console.log('gitlab-sdk');
-}
+};
