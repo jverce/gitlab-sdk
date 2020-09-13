@@ -1,0 +1,24 @@
+{
+  "name": "gitlab-sdk",
+  "version": "1.0.0",
+  "description": "Javascript client for the Gitlab API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jverce/gitlab-sdk.git"
+  },
+  "keywords": [
+    "gitlab",
+    "sdk",
+    "api"
+  ],
+  "author": "@jverce",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jverce/gitlab-sdk/issues"
+  },
+  "homepage": "https://github.com/jverce/gitlab-sdk#readme"
+}
