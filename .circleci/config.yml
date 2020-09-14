@@ -37,6 +37,8 @@ jobs:
   tag:
     <<: *defaults
     steps:
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Tag version
           command: npm version patch -m "[skip ci] Release patch version v%s"
