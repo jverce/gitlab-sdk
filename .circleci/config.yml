@@ -19,7 +19,7 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm ci
 
       - save_cache:
           paths:
@@ -39,12 +39,23 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+
+      - run:
+          name: Config Git user email
+          command: git config user.email `git show -s --format='%ae' HEAD`
+      - run:
+          name: Config Git user name
+          command: git config user.name `git show -s --format='%an' HEAD`
+
       - run:
           name: Tag version
           command: npm version patch -m "[skip ci] Release patch version v%s"
       - run:
-          name: Push tag to repo
+          name: Push version commit to repo
           command: git push
+      - run:
+          name: Push tag to repo
+          command: git push --tags
 
   deploy:
     <<: *defaults
