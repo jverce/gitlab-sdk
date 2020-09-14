@@ -52,7 +52,7 @@ jobs:
           command: mkdir -p ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
       - add_ssh_keys:
           fingerprints:
-            - "$SSH_KEY_FINGERPRINT"
+            - "25:65:b8:b6:1d:a9:39:77:59:2e:ac:23:eb:77:49:97"
 
       - run:
           name: Tag version
