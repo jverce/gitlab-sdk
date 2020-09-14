@@ -12,7 +12,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "25:65:b8:b6:1d:a9:39:77:59:2e:ac:23:eb:77:49:97"
-
       - checkout
 
       - restore_cache:
@@ -51,6 +50,7 @@ jobs:
       - run:
           name: Config Git user name
           command: git config user.name `git show -s --format='%an' HEAD`
+
       - run:
           name: Add Github as a trusted host
           command: mkdir -p ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts

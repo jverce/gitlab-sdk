@@ -2,9 +2,9 @@
   "name": "gitlab-sdk",
   "version": "0.0.4",
   "description": "Javascript client for the Gitlab API",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node src/index.js"
   },
   "repository": {
     "type": "git",
