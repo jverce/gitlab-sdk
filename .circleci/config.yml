@@ -9,6 +9,10 @@ jobs:
   test:
     <<: *defaults
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "25:65:b8:b6:1d:a9:39:77:59:2e:ac:23:eb:77:49:97"
+
       - checkout
 
       - restore_cache:
