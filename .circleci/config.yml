@@ -40,12 +40,16 @@ jobs:
       - attach_workspace:
           at: ~/repo
 
+      # Local CLI setup to commit and push to Github
       - run:
           name: Config Git user email
           command: git config user.email `git show -s --format='%ae' HEAD`
       - run:
           name: Config Git user name
           command: git config user.name `git show -s --format='%an' HEAD`
+      - run:
+          name: Add Github as a trusted host
+          command: ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       - run:
           name: Tag version
