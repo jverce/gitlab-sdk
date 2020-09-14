@@ -50,6 +50,9 @@ jobs:
       - run:
           name: Add Github as a trusted host
           command: mkdir -p ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - add_ssh_keys:
+          fingerprints:
+            - "05:27:68:2f:7f:04:80:4f:a5:20:31:d6:05:40:28:99"
 
       - run:
           name: Tag version
