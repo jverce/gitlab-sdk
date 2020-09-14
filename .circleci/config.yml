@@ -68,6 +68,10 @@ jobs:
           name: Push tag to repo
           command: git push --tags
 
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
   deploy:
     <<: *defaults
     steps:
